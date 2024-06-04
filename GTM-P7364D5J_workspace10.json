@@ -1,0 +1,860 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2024-05-17 15:15:00",
+    "containerVersion": {
+        "path": "accounts/6006662468/containers/182255449/versions/0",
+        "accountId": "6006662468",
+        "containerId": "182255449",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6006662468/containers/182255449",
+            "accountId": "6006662468",
+            "containerId": "182255449",
+            "name": "iframe_container",
+            "publicId": "GTM-P7364D5J",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1712605542090",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6006662468/containers/182255449/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-P7364D5J"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "tagId": "110",
+                "name": "cHTML - postMessage - Send - All Links",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  try {\n      var postObject = JSON.stringify({\n        event: 'iframeLinkClick', \n        tapText: '{{CONST - Click Text Clean}}',\n        tapLink: '{{LT - Click URL - Short Clean}}'\n      });\n      parent.postMessage(postObject, 'https://ecommercedemostore.com/');\n} catch(e) {\n  window.console && window.console.log(e);\n}\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1712608721689",
+                "firingTriggerId": [
+                    "109"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "tagId": "156",
+                "name": "cHTML - postMessage - Send - DropDown Selection",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  try {\n      var postObject = JSON.stringify({\n        event: 'iframeDropdownSelect', \n        elementType: 'dropdown',\n        tapText: '{{JS - Click Value}}'\n      });\n      parent.postMessage(postObject, 'https://ecommercedemostore.com/');\n} catch(e) {\n  window.console && window.console.log(e);\n}\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1712608731362",
+                "firingTriggerId": [
+                    "126"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "tagId": "176",
+                "name": "cHTML - postMessage - Send - iframeScroll",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  try {\n      var postObject = JSON.stringify({\n        event: 'iframeScroll', \n        iframePage: '{{Page Path}}',\n        iframePageType: 'iframe page!!',\n        iframeScrollDepth: '{{Scroll Depth Threshold}}'\n      });\n\n      parent.postMessage(postObject, 'https://ecommercedemostore.com/');\n} catch(e) {\n  window.console && window.console.log(e);\n}\n  </script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1712610335563",
+                "firingTriggerId": [
+                    "181"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "triggerId": "109",
+                "name": "Click - All Link Clicks",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "li.account, li.account *"
+                            },
+                            {
+                                "type": "BOOLEAN",
+                                "key": "negate",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1715958491830"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "triggerId": "123",
+                "name": "Click - All CTAs",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "button, button *, input[type=\"button\"], input[type=\"button\"] *"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715958457356"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "triggerId": "126",
+                "name": "Click - Delivery Missing Item Dropdown",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "CSS_SELECTOR",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Element}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "#myselection"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/deliverymissingitem"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1712605687243"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "triggerId": "181",
+                "name": "Scroll - iframe Scroll",
+                "type": "SCROLL_DEPTH",
+                "fingerprint": "1715958513841",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdUnits",
+                        "value": "PERCENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdsPercent",
+                        "value": "25,50,75,100"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "verticalThresholdOn",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "triggerStartOption",
+                        "value": "WINDOW_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "horizontalThresholdOn",
+                        "value": "false"
+                    }
+                ]
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "21",
+                "name": "CJS - Blank Space",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var blank = \"\";\n  return blank;\n}"
+                    }
+                ],
+                "fingerprint": "1715958731497",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "77",
+                "name": "JS - Click Value",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var element = {{Click Element}}; \n  var selected = element.value\n  return selected; \n}"
+                    }
+                ],
+                "fingerprint": "1712605687164",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE"
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "86",
+                "name": "CONST - Undefined Value",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "undefined"
+                    }
+                ],
+                "fingerprint": "1715958701255",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "87",
+                "name": "JS - Click URL",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  var element = {{Click Element}};\n  var selected = element.getAttribute('href');\n  return selected;  \n}"
+                    }
+                ],
+                "fingerprint": "1712605687168",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE",
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "88",
+                "name": "URL - Click URL - Fragment",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "FRAGMENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customUrlSource",
+                        "value": "{{JS - Click URL}}"
+                    }
+                ],
+                "fingerprint": "1712605687169",
+                "formatValue": {
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "undefined"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "undefined"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "undefined"
+                    }
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "89",
+                "name": "LT - Click URL - Fragment",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{URL - Click URL - Fragment}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "#{{URL - Click URL - Fragment}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "{{CJS - Blank Space}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{CJS - Blank Space}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "undefined"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{CJS - Blank Space}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715958658558",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "95",
+                "name": "CONST - Cross Domain Linking",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "wawacatering.com, wawa.com, wawarewards.com, nutritionix.com"
+                    }
+                ],
+                "fingerprint": "1715958705749",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "97",
+                "name": "URL - Click URL - Path",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "PATH"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "defaultPages"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customUrlSource",
+                        "value": "{{JS - Click URL}}"
+                    }
+                ],
+                "fingerprint": "1712605687173",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE",
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "102",
+                "name": "CONST - Click Classes Clean",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "{{Click Classes}}"
+                    }
+                ],
+                "fingerprint": "1715958715439",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE",
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "103",
+                "name": "JS - Click Alt Text",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  \n  if(window.dataLayer.length == 0)\n    return false;\n  \n  var element;\n  var dataElements = window.dataLayer[window.dataLayer.length-1];\n  \n  if(dataElements[\"gtm.element\"])\n  \telement = dataElements[\"gtm.element\"];\n\n  if(typeof(element) == \"undefined\")\n    return false;\n\n  // Add your selector here:\n  var selected = $(element).closest(\"a\").find(\"img\").attr(\"alt\");\n  \n  return selected;\n}"
+                    }
+                ],
+                "fingerprint": "1712605687232",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE",
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Click Classes Clean}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Click Classes Clean}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Click Classes Clean}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "105",
+                "name": "CONST - Click Text Clean",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "{{Click Text}}"
+                    }
+                ],
+                "fingerprint": "1715958711341",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE",
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{JS - Click Alt Text}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{JS - Click Alt Text}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{JS - Click Alt Text}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "106",
+                "name": "URL - Click URL - Host Name",
+                "type": "u",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "stripWww",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "component",
+                        "value": "HOST"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customUrlSource",
+                        "value": "{{JS - Click URL}}"
+                    }
+                ],
+                "fingerprint": "1712605687234",
+                "formatValue": {
+                    "caseConversionType": "LOWERCASE",
+                    "convertNullToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertUndefinedToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    },
+                    "convertFalseToValue": {
+                        "type": "TEMPLATE",
+                        "value": "{{CONST - Undefined Value}}"
+                    }
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "107",
+                "name": "CONST - Click URL Short Clean",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "{{URL - Click URL - Host Name}}{{URL - Click URL - Path}}{{LT - Click URL - Fragment}}"
+                    }
+                ],
+                "fingerprint": "1715958719604",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "variableId": "108",
+                "name": "LT - Click URL - Short Clean",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{JS - Click URL}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{CONST - Click URL Short Clean}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "{{CONST - Undefined Value}}"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{CONST - Undefined Value}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715958682588",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "FORM_ELEMENT",
+                "name": "Form Element"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "FORM_CLASSES",
+                "name": "Form Classes"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "FORM_ID",
+                "name": "Form ID"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "FORM_TARGET",
+                "name": "Form Target"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "FORM_URL",
+                "name": "Form URL"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "FORM_TEXT",
+                "name": "Form Text"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CONTAINER_VERSION",
+                "name": "Container Version"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "RANDOM_NUMBER",
+                "name": "Random Number"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "CONTAINER_ID",
+                "name": "Container ID"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "HTML_ID",
+                "name": "HTML ID"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "ENVIRONMENT_NAME",
+                "name": "Environment Name"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "SCROLL_DEPTH_THRESHOLD",
+                "name": "Scroll Depth Threshold"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "SCROLL_DEPTH_UNITS",
+                "name": "Scroll Depth Units"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182255449",
+                "type": "SCROLL_DEPTH_DIRECTION",
+                "name": "Scroll Direction"
+            }
+        ],
+        "fingerprint": "1715958900528",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6006662468/containers/182255449/versions/0?apiLink=version"
+    }
+}

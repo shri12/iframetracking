@@ -1,0 +1,812 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2024-05-17 15:14:42",
+    "containerVersion": {
+        "path": "accounts/6006662468/containers/182251257/versions/0",
+        "accountId": "6006662468",
+        "containerId": "182251257",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6006662468/containers/182251257",
+            "accountId": "6006662468",
+            "containerId": "182251257",
+            "name": "iframe_parent",
+            "publicId": "GTM-WCNDW2PB",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1712605459546",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6006662468/containers/182251257/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-WCNDW2PB"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "tagId": "627",
+                "name": "GA4 - Event - Link Click - iframe",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "element_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "link"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "tap_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV - tapText}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "tap_link"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV - tapLink}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "element_tap"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-1234"
+                    }
+                ],
+                "fingerprint": "1715869574973",
+                "firingTriggerId": [
+                    "306"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "tagId": "667",
+                "name": "CHTML - iframe - Event Listener",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\n(function(window) {\n\n    addEvent(window, 'message', function(message) {\n      try{\n      var data = JSON.parse(message.data);\n      var dataLayer = window.dataLayer || (window.dataLayer = []);\n      if (data.event) {\n        dataLayer.push({\n          'event': data.event,\n          'iframeEventPost': data\n        });\n      }\n      }catch(e){}\n    });\n\n    // Cross-browser event listener\n    function addEvent(el, evt, fn) {\n      if (el.addEventListener) {\n        el.addEventListener(evt, fn);\n      } else if (el.attachEvent) {\n        el.attachEvent('on' + evt, function(evt) {\n          fn.call(el, evt);\n        });\n      } else if (typeof el['on' + evt] === 'undefined' || el['on' + evt] === null) {\n        el['on' + evt] = function(evt) {\n          fn.call(el, evt);\n        };\n      }\n    }\n\n  })(window);\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1715869464430",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "tagId": "672",
+                "name": "GA4 - Event - Scroll Depth - iframe",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_location"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV - iframePage}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "iframe_page_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV - iframePageType}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "iframe_scroll_depth"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV - iframeScroll depth}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "c_iframe_scroll"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-1234"
+                    }
+                ],
+                "fingerprint": "1715869537677",
+                "firingTriggerId": [
+                    "783"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "tagId": "775",
+                "name": "GA4 - Event - Dropdown Selection - iframe",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "element_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "dropdown"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "tap_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{DLV - tapText}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "element_tap"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-1234"
+                    }
+                ],
+                "fingerprint": "1715869589744",
+                "firingTriggerId": [
+                    "84"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "tagId": "778",
+                "name": "GA4 - Configuration Tag",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "G-1234"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "container"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Container ID}}{{Container Version}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715874435814",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "triggerId": "84",
+                "name": "CE - All - iframeDropdownSelect",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "iframeDropdownSelect"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715869792046"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "triggerId": "306",
+                "name": "CE - All - iframeLinkClick",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "iframeLinkClick"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715869802061"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "triggerId": "671",
+                "name": "CE - All - iframeButtonClick",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "iframeButtonClick"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715869769360"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "triggerId": "781",
+                "name": "Scroll - All - iframeScroll",
+                "type": "SCROLL_DEPTH",
+                "fingerprint": "1715958599242",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdUnits",
+                        "value": "PERCENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "verticalThresholdsPercent",
+                        "value": "10, 90"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "verticalThresholdOn",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "triggerStartOption",
+                        "value": "WINDOW_LOAD"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "horizontalThresholdOn",
+                        "value": "false"
+                    }
+                ]
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "triggerId": "783",
+                "name": "CE - All - iframeScroll",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "iframeScroll"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715869785168"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "variableId": "30",
+                "name": "DLV - tapText",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "iframeEventPost.tapText"
+                    }
+                ],
+                "fingerprint": "1712605791732",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "variableId": "215",
+                "name": "DLV - tapLink",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "iframeEventPost.tapLink"
+                    }
+                ],
+                "fingerprint": "1712605791938",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "variableId": "782",
+                "name": "DLV - iframePage",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "iframeEventPost.iframePage"
+                    }
+                ],
+                "fingerprint": "1712610221206",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "variableId": "784",
+                "name": "DLV - iframeScroll depth",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "iframeEventPost.iframeScrollDepth"
+                    }
+                ],
+                "fingerprint": "1712610199503",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "variableId": "785",
+                "name": "DLV - iframePageType",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "iframeEventPost.iframePageType"
+                    }
+                ],
+                "fingerprint": "1712610230933",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "FORM_ELEMENT",
+                "name": "Form Element"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "FORM_CLASSES",
+                "name": "Form Classes"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "FORM_ID",
+                "name": "Form ID"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "NEW_HISTORY_FRAGMENT",
+                "name": "New History Fragment"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "OLD_HISTORY_FRAGMENT",
+                "name": "Old History Fragment"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "NEW_HISTORY_STATE",
+                "name": "New History State"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "OLD_HISTORY_STATE",
+                "name": "Old History State"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "HISTORY_SOURCE",
+                "name": "History Source"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CONTAINER_VERSION",
+                "name": "Container Version"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "DEBUG_MODE",
+                "name": "Debug Mode"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "RANDOM_NUMBER",
+                "name": "Random Number"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "CONTAINER_ID",
+                "name": "Container ID"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "ENVIRONMENT_NAME",
+                "name": "Environment Name"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "SCROLL_DEPTH_THRESHOLD",
+                "name": "Scroll Depth Threshold"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "SCROLL_DEPTH_UNITS",
+                "name": "Scroll Depth Units"
+            },
+            {
+                "accountId": "6006662468",
+                "containerId": "182251257",
+                "type": "SCROLL_DEPTH_DIRECTION",
+                "name": "Scroll Direction"
+            }
+        ],
+        "fingerprint": "1715958882907",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6006662468/containers/182251257/versions/0?apiLink=version"
+    }
+}
